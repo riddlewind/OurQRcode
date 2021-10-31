@@ -13,9 +13,6 @@
             android:name=".ShowActivity"
             android:exported="false" />
         <activity
-            android:name=".ScanActivity"
-            android:exported="false" />
-        <activity
             android:name=".InputActivity"
             android:exported="true" />
         <activity
