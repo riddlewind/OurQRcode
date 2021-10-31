@@ -17,6 +17,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.view.PreviewView;
 
+/**
+ * 实现二维码扫描的函数
+ */
 public class QRCodeScanActivity extends AppCompatActivity implements CameraScan.OnScanResultCallback{
 
     private static final int CAMERA_PERMISSION_REQUEST_CODE = 0X86;
@@ -120,8 +123,6 @@ public class QRCodeScanActivity extends AppCompatActivity implements CameraScan.
 
     /**
      * 请求Camera权限回调结果
-     * @param permissions
-     * @param grantResults
      */
     public void requestCameraPermissionResult(@NonNull String[] permissions, @NonNull int[] grantResults){
         if(PermissionUtils.requestPermissionsResult(Manifest.permission.CAMERA,permissions,grantResults)){
@@ -139,8 +140,6 @@ public class QRCodeScanActivity extends AppCompatActivity implements CameraScan.
 
     /**
      * 返回true时会自动初始化{@link #setContentView(int)}，返回为false是需自己去初始化{@link #setContentView(int)}
-     * @param layoutId
-     * @return 默认返回true
      */
     public boolean isContentView(@LayoutRes int layoutId){
         return true;

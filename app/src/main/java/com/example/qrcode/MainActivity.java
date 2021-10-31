@@ -25,6 +25,9 @@ import com.king.zxing.util.LogUtils;
 import java.io.IOException;
 import java.util.regex.Pattern;
 
+/**
+ * 主程序
+ */
 public class MainActivity extends AppCompatActivity {
 
     public static final String KEY_TITLE = "key_title";
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private String title;
     private Toast toast;
     private boolean isContinuousScan;
+    //判断是否为网址的正则表达式
     Pattern pattern = Pattern.compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+$");
 
 
@@ -72,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * 扫码
-     * @param cls
-     * @param title
      */
     private void startScan(Class<?> cls,String title){
         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeCustomAnimation(this,R.anim.in,R.anim.out);
@@ -98,10 +100,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * @author panyunxiang
-     * @param requestCode
-     * @param resultCode
-     * @param data
      * 检测扫描到的内容是网址还是文本
      */
     @Override
@@ -135,17 +133,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*
-    private void showToast(String text){
-        if(toast == null){
-            toast = Toast.makeText(this,text,Toast.LENGTH_SHORT);
-        }else{
-            toast.setDuration(Toast.LENGTH_SHORT);
-            toast.setText(text);
-        }
-        toast.show();
-    }
-     */
 
     private void parsePhoto(Intent data){
 

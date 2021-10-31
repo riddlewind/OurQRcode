@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 /**
- * @author panyunxiang
  * 生成新的页面显示扫描二维码得到的文本
- * @return
  */
 public class ShowActivity extends AppCompatActivity {
 

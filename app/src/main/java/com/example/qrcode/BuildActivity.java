@@ -12,9 +12,7 @@ import com.king.zxing.util.CodeUtils;
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
- * @author panyunxiang
  * 生成二维码或者条形码
- * @return
  */
 public class BuildActivity extends AppCompatActivity {
 
