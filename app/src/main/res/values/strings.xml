@@ -1,7 +1,7 @@
 <resources>
 
     <string name="permission_camera">App扫码需要用到拍摄权限</string>
-    <string name="app_name">Homework</string>
+    <string name="app_name">二维码扫描生成器</string>
     <string name="scan_name">扫描二维码</string>
     <string name="build_name">生成二维码</string>
     <string name="input">请输入需要生成的内容</string>
