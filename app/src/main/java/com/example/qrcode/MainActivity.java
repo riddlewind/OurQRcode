@@ -97,6 +97,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * @author panyunxiang
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     * 检测扫描到的内容是网址还是文本
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -106,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
                     String result = CameraScan.parseScanResult(data);
                     if(pattern.matcher(result).matches())
                     {
+                        //使用浏览器打开扫码获得的网址
                         Intent intent= new Intent();
                         intent.setAction("android.intent.action.VIEW");
                         Uri content_url = Uri.parse(result);
@@ -113,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                     else {
+                        //调用ShowActivity显示扫描获得的文本
                         Intent intent = new Intent(MainActivity.this,ShowActivity.class);
                         intent.putExtra("content",result);
                         startActivity(intent);
@@ -126,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
     private void showToast(String text){
         if(toast == null){
             toast = Toast.makeText(this,text,Toast.LENGTH_SHORT);
@@ -135,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
         }
         toast.show();
     }
+     */
 
     private void parsePhoto(Intent data){
 

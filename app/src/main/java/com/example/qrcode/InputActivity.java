@@ -9,6 +9,9 @@ import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * 通过输入的内容生成对应的二维码或条形码
+ */
 public class InputActivity extends AppCompatActivity {
 
     private Button mBtn;
