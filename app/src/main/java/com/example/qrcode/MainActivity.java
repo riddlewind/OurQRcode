@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Class<?> cls;
     private String title;
-    private Toast toast;
-    private boolean isContinuousScan;
+
     //判断是否为网址的正则表达式
     Pattern pattern = Pattern.compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+$");
 
@@ -87,7 +86,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onClick(View v){
-        isContinuousScan = false;
         switch (v.getId()){
             case R.id.btn_01:
                 this.cls = CaptureActivity.class;
@@ -100,6 +98,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * @author panyunxiang
+     * @param requestCode
+     * @param resultCode
+     * @param data
      * 检测扫描到的内容是网址还是文本
      */
     @Override
